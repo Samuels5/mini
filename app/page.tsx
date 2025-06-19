@@ -43,6 +43,7 @@ export default function HomePage() {
     restaurant_logo: "",
     restaurant_status: "",
   });
+  const [meals, setMeals] = useState([]);
 
   const featuredMeals = [
     {
@@ -156,6 +157,22 @@ export default function HomePage() {
       });
     }
   }, [editMeal]);
+
+  useEffect(() => {
+    async function fetchMeals() {
+      try {
+        const res = await fetch(
+          "https://6852821e0594059b23cdd834.mockapi.io/Food"
+        );
+        const data = await res.json();
+        setMeals(data);
+        console.log("Fetched meals:", data);
+      } catch (error) {
+        console.error("Failed to fetch meals:", error);
+      }
+    }
+    fetchMeals();
+  }, []);
 
   return (
     <div className="min-h-screen bg-white">

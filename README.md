@@ -10,6 +10,10 @@ A Next.js + React + Tailwind CSS web app for managing food items, built for the 
 - Semantic, accessible HTML and form validation
 - Built with Next.js 15, React 19, and Tailwind CSS 4
 
+## Live Demo
+
+The app is deployed at: [https://mini-omega-sand.vercel.app/](https://mini-omega-sand.vercel.app/)
+
 ## Getting Started
 
 ### Prerequisites
